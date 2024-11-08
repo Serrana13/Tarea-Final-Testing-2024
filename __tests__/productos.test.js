@@ -91,3 +91,8 @@ test('Probar cantidad correcta de productos en "Todos los productos"', () => {
     const valorObtenido = productos.length;
     expect(valorObtenido).toEqual(valorEsperado);
 });
+
+test('Probar categoria sin objetos', () => {
+    const valorObtenido = filtrarProductos(productos, "categoriaVacia").length;
+    expect(valorObtenido).toBe(0);
+});
